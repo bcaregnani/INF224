@@ -1,0 +1,85 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include \char`\"{}Multimedia.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Photo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Film.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Group.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Mapping.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tcpserver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Factory.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a24cd3c37a165a8c4626d9e78df4574ff}{S\+E\+R\+V\+ER}}
+\begin{DoxyCompactList}\small\item\em Macro for choosing S\+T\+A\+G\+E\+S10 or S\+E\+R\+V\+ER. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_a55bf4041389b5003ce458c1cb82883b8}{save\+All}} (const std\+::string \&filename, const std\+::vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ $>$ \&objects)
+\item 
+bool \mbox{\hyperlink{main_8cpp_a59488d001b029718c35ff772147e041e}{read\+All}} (const std\+::string \&filename, std\+::vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ $>$ \&objects)
+\item 
+int \mbox{\hyperlink{main_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{main_8cpp_a11717c934f77ad5167dac5d28562d85a}{P\+O\+RT}} = 3331
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8cpp_a24cd3c37a165a8c4626d9e78df4574ff}\label{main_8cpp_a24cd3c37a165a8c4626d9e78df4574ff}} 
+\index{main.cpp@{main.cpp}!SERVER@{SERVER}}
+\index{SERVER@{SERVER}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SERVER}{SERVER}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+ER}
+
+
+
+Macro for choosing S\+T\+A\+G\+E\+S10 or S\+E\+R\+V\+ER. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ac0f2228420376f4db7e1274f2b41667c}\label{main_8cpp_ac0f2228420376f4db7e1274f2b41667c}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+S\+E\+R\+V\+ER\mbox{\Hypertarget{main_8cpp_a59488d001b029718c35ff772147e041e}\label{main_8cpp_a59488d001b029718c35ff772147e041e}} 
+\index{main.cpp@{main.cpp}!readAll@{readAll}}
+\index{readAll@{readAll}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{readAll()}{readAll()}}
+{\footnotesize\ttfamily bool read\+All (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ $>$ \&}]{objects }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a55bf4041389b5003ce458c1cb82883b8}\label{main_8cpp_a55bf4041389b5003ce458c1cb82883b8}} 
+\index{main.cpp@{main.cpp}!saveAll@{saveAll}}
+\index{saveAll@{saveAll}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{saveAll()}{saveAll()}}
+{\footnotesize\ttfamily bool save\+All (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ $>$ \&}]{objects }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a11717c934f77ad5167dac5d28562d85a}\label{main_8cpp_a11717c934f77ad5167dac5d28562d85a}} 
+\index{main.cpp@{main.cpp}!PORT@{PORT}}
+\index{PORT@{PORT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PORT}{PORT}}
+{\footnotesize\ttfamily const int P\+O\+RT = 3331}
+

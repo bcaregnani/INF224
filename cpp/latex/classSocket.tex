@@ -1,0 +1,485 @@
+\hypertarget{classSocket}{}\doxysection{Socket Class Reference}
+\label{classSocket}\index{Socket@{Socket}}
+
+
+{\ttfamily \#include $<$ccsocket.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976}{Errors}} \{ \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976a86c20a6b52053a1f39f5d31b28b9e7cb}{Failed}} = -\/1, 
+\mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976ae3fcc87ee9b909ea92c751f70df4c9ac}{Invalid\+Socket}} = -\/2, 
+\mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976ab8eb7f6e1d237e242921ef128c01491c}{Unknown\+Host}} = -\/3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSocket_acd3cb39bc957be2f34c91b9e262e1cec}{Socket}} (int type=S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+AM)
+\item 
+\mbox{\hyperlink{classSocket_a8e3f095dfe84d6599761c4ca54900487}{Socket}} (int type, \mbox{\hyperlink{ccsocket_8h_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}} sockfd)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classSocket}{Socket}} from an existing socket file descriptor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{$\sim$\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Destructor (closes the socket). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_a772419bd74c4fe4987d190506a64ff87}{connect}} (const std\+::string \&host, int port)
+\item 
+int \mbox{\hyperlink{classSocket_aff8a77c02a44937db59c8c8a057072d9}{bind}} (int port)
+\item 
+int \mbox{\hyperlink{classSocket_acdffcdd08c888132e95da022e0710b1d}{bind}} (const std\+::string \&host, int port)
+\item 
+int \mbox{\hyperlink{classSocket_aef06605c6725958004116983f1a2051f}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the socket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSocket_af82b21921f44a5c210f8aaedc26ca1c3}{is\+Closed}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the socket has been closed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ccsocket_8h_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}} \mbox{\hyperlink{classSocket_a1f3bad4217fea24f81d39f57406a0ec8}{descriptor}} ()
+\begin{DoxyCompactList}\small\item\em Returns the descriptor of the socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSocket_a417b47af24de10184192de00d9112589}{shutdown\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Disables further receive operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSocket_a650128aee2581e6695c6812d8afe14b5}{shutdown\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Disables further send operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ccsocket_8h_a8bc56bf597ba32a5c8d828c75b4c9566}{S\+O\+C\+K\+S\+I\+ZE}} \mbox{\hyperlink{classSocket_aadd260f15afadf0c31fa3dcf88d0ea49}{send}} (const \mbox{\hyperlink{ccsocket_8h_a3849e30868a59da338c76e51820877c1}{S\+O\+C\+K\+D\+A\+TA}} $\ast$buf, size\+\_\+t len, int flags=0)
+\item 
+\mbox{\hyperlink{ccsocket_8h_a8bc56bf597ba32a5c8d828c75b4c9566}{S\+O\+C\+K\+S\+I\+ZE}} \mbox{\hyperlink{classSocket_a01b463d51433a10658854446bde71c40}{receive}} (\mbox{\hyperlink{ccsocket_8h_a3849e30868a59da338c76e51820877c1}{S\+O\+C\+K\+D\+A\+TA}} $\ast$buf, size\+\_\+t len, int flags=0)
+\item 
+\mbox{\hyperlink{ccsocket_8h_a8bc56bf597ba32a5c8d828c75b4c9566}{S\+O\+C\+K\+S\+I\+ZE}} \mbox{\hyperlink{classSocket_aef5c4ba848f475f117b89bac531ac150}{send\+To}} (void const $\ast$buf, size\+\_\+t len, int flags, \mbox{\hyperlink{ccsocket_8h_a964e73b2a42e87b1e20c8ffa730952a2}{S\+O\+C\+K\+A\+D\+DR}} const $\ast$to, socklen\+\_\+t addrlen)
+\begin{DoxyCompactList}\small\item\em Sends data to a datagram socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ccsocket_8h_a8bc56bf597ba32a5c8d828c75b4c9566}{S\+O\+C\+K\+S\+I\+ZE}} \mbox{\hyperlink{classSocket_aa19f1c03af97458c042880c6be638151}{receive\+From}} (void $\ast$buf, size\+\_\+t len, int flags, \mbox{\hyperlink{ccsocket_8h_a964e73b2a42e87b1e20c8ffa730952a2}{S\+O\+C\+K\+A\+D\+DR}} $\ast$from, socklen\+\_\+t $\ast$addrlen)
+\begin{DoxyCompactList}\small\item\em Receives data from datagram socket. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_a06ff0dd6837c9f51948df655fc2713cd}{set\+Receive\+Buffer\+Size}} (int size)
+\begin{DoxyCompactList}\small\item\em Set the size of the T\+C\+P/\+IP input buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_ab02b997fa7e251d596116e95c9ccaf97}{set\+Reuse\+Address}} (bool)
+\begin{DoxyCompactList}\small\item\em Enable/disable the S\+O\+\_\+\+R\+E\+U\+S\+E\+A\+D\+DR socket option. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_afc49ad6cc259a0006ca13bb22fdd7383}{set\+Send\+Buffer\+Size}} (int size)
+\begin{DoxyCompactList}\small\item\em Set the size of the T\+C\+P/\+IP output buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_a41cc1caae51e3e83e16ce2c20689ed03}{set\+So\+Linger}} (bool, int linger)
+\begin{DoxyCompactList}\small\item\em Enable/disable S\+O\+\_\+\+L\+I\+N\+G\+ER with the specified linger time in seconds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_ad65a22ec40902e2c0a98c5d4ac885f99}{set\+So\+Timeout}} (int timeout)
+\begin{DoxyCompactList}\small\item\em Enable/disable S\+O\+\_\+\+T\+I\+M\+E\+O\+UT with the specified timeout (in milliseconds). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_a7bc0110f3bedbb18f26b05ece01553fa}{set\+Tcp\+No\+Delay}} (bool)
+\begin{DoxyCompactList}\small\item\em Enable/disable T\+C\+P\+\_\+\+N\+O\+D\+E\+L\+AY (turns on/off T\+CP coalescence). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_a53a0a6980058ce02034033b05f6ca389}{get\+Receive\+Buffer\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Return the size of the T\+C\+P/\+IP input buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSocket_a440e7ee9303d454df0c51fe6125cd2af}{get\+Reuse\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Return S\+O\+\_\+\+R\+E\+U\+S\+E\+A\+D\+DR state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_acb2d3979ff562c2ffd60b12a1b4c9897}{get\+Send\+Buffer\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Return the size of the T\+C\+P/\+IP output buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSocket_ae3545855771edf076843e2e07fa7d3cd}{get\+So\+Linger}} (int \&linger) const
+\begin{DoxyCompactList}\small\item\em Return S\+O\+\_\+\+L\+I\+N\+G\+ER state and the specified linger time in seconds. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSocket_a38b17de459b22ab45db16e538b963c49}{get\+So\+Timeout}} () const
+\begin{DoxyCompactList}\small\item\em Return S\+O\+\_\+\+T\+I\+M\+E\+O\+UT value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSocket_a2539928ed0829df5070384f907ea48f7}{get\+Tcp\+No\+Delay}} () const
+\begin{DoxyCompactList}\small\item\em Return T\+C\+P\+\_\+\+N\+O\+D\+E\+L\+AY state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classSocket_a1a662407744738aa56d1ccb6d7be26eb}{startup}} ()
+\item 
+static void \mbox{\hyperlink{classSocket_a744a91706b9510d266b7c07e31f3e028}{cleanup}} ()
+\end{DoxyCompactItemize}
+
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classSocket_ae65efac394eb49594cbb5b2db957e056}{set\+Local\+Address}} (\mbox{\hyperlink{ccsocket_8h_a91d11a5e66bd1e10b0e62aadb7775c9d}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} \&addr, int port)
+\item 
+int \mbox{\hyperlink{classSocket_afa64e345564506760728d2b545fcbe0c}{set\+Address}} (\mbox{\hyperlink{ccsocket_8h_a91d11a5e66bd1e10b0e62aadb7775c9d}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} \&addr, const std\+::string \&host, int port)
+\item 
+\mbox{\hyperlink{classSocket_aae1f09b930bb7118172baa0abb15543e}{Socket}} (const \mbox{\hyperlink{classSocket}{Socket}} \&)=delete
+\item 
+\mbox{\hyperlink{classSocket}{Socket}} \& \mbox{\hyperlink{classSocket_a32353d2225228b1ee4e3abef0f96cca7}{operator=}} (const \mbox{\hyperlink{classSocket}{Socket}} \&)=delete
+\item 
+\mbox{\hyperlink{classSocket}{Socket}} \& \mbox{\hyperlink{classSocket_a7f221b24943b976d6cbae4cc0c32dd4f}{operator=}} (\mbox{\hyperlink{classSocket}{Socket}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ccsocket_8h_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}} \mbox{\hyperlink{classSocket_afae007041d3bb70fa141b79791019d2d}{sockfd\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSocket_a11a8bb11feaafab939278a8285afa567}{Server\+Socket}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T\+C\+P/\+IP or U\+D\+P/\+Datagram I\+Pv4 socket. A\+F\+\_\+\+I\+N\+ET connections following the I\+Pv4 Internet protocol are supported. \begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classServerSocket}{Server\+Socket}} should be used on the server side.
+\item S\+I\+G\+P\+I\+PE signals are ignored when using Linux, B\+SD or M\+A\+C\+O\+SX.
+\item T\+C\+P/\+IP sockets do not preserve record boundaries but \mbox{\hyperlink{classSocketBuffer}{Socket\+Buffer}} solves this problem. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classSocket_a9f68308228badcdd299cd83e62e36976}\label{classSocket_a9f68308228badcdd299cd83e62e36976}} 
+\index{Socket@{Socket}!Errors@{Errors}}
+\index{Errors@{Errors}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{Errors}{Errors}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976}{Socket\+::\+Errors}}}
+
+\mbox{\hyperlink{classSocket}{Socket}} errors.
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976a86c20a6b52053a1f39f5d31b28b9e7cb}{Socket\+::\+Failed}} (-\/1)\+: could not connect, could not bind, etc.
+\item \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976ae3fcc87ee9b909ea92c751f70df4c9ac}{Socket\+::\+Invalid\+Socket}} (-\/2)\+: invalid socket or wrong socket type
+\item \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976ab8eb7f6e1d237e242921ef128c01491c}{Socket\+::\+Unknown\+Host}} (-\/3)\+: could not reach host 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Failed@{Failed}!Socket@{Socket}}\index{Socket@{Socket}!Failed@{Failed}}}\mbox{\Hypertarget{classSocket_a9f68308228badcdd299cd83e62e36976a86c20a6b52053a1f39f5d31b28b9e7cb}\label{classSocket_a9f68308228badcdd299cd83e62e36976a86c20a6b52053a1f39f5d31b28b9e7cb}} 
+Failed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvalidSocket@{InvalidSocket}!Socket@{Socket}}\index{Socket@{Socket}!InvalidSocket@{InvalidSocket}}}\mbox{\Hypertarget{classSocket_a9f68308228badcdd299cd83e62e36976ae3fcc87ee9b909ea92c751f70df4c9ac}\label{classSocket_a9f68308228badcdd299cd83e62e36976ae3fcc87ee9b909ea92c751f70df4c9ac}} 
+Invalid\+Socket&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnknownHost@{UnknownHost}!Socket@{Socket}}\index{Socket@{Socket}!UnknownHost@{UnknownHost}}}\mbox{\Hypertarget{classSocket_a9f68308228badcdd299cd83e62e36976ab8eb7f6e1d237e242921ef128c01491c}\label{classSocket_a9f68308228badcdd299cd83e62e36976ab8eb7f6e1d237e242921ef128c01491c}} 
+Unknown\+Host&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSocket_acd3cb39bc957be2f34c91b9e262e1cec}\label{classSocket_acd3cb39bc957be2f34c91b9e262e1cec}} 
+\index{Socket@{Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{int}]{type = {\ttfamily SOCK\+\_\+STREAM} }\end{DoxyParamCaption})}
+
+Creates a new \mbox{\hyperlink{classSocket}{Socket}}. Creates a A\+F\+\_\+\+I\+N\+ET socket using the I\+Pv4 Internet protocol. Type can be\+:
+\begin{DoxyItemize}
+\item S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+AM (the default) for T\+C\+P/\+IP connected stream sockets
+\item S\+O\+C\+K\+\_\+\+D\+G\+R\+AM for U\+D\+P/datagram sockets (available only or Unix/\+Linux) 
+\end{DoxyItemize}\mbox{\Hypertarget{classSocket_a8e3f095dfe84d6599761c4ca54900487}\label{classSocket_a8e3f095dfe84d6599761c4ca54900487}} 
+\index{Socket@{Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{\mbox{\hyperlink{ccsocket_8h_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}}}]{sockfd }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{classSocket}{Socket}} from an existing socket file descriptor. 
+
+\mbox{\Hypertarget{classSocket_aeac4eb6379a543d38ed88977d3b6630a}\label{classSocket_aeac4eb6379a543d38ed88977d3b6630a}} 
+\index{Socket@{Socket}!````~Socket@{$\sim$Socket}}
+\index{````~Socket@{$\sim$Socket}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{$\sim$Socket()}{~Socket()}}
+{\footnotesize\ttfamily Socket\+::$\sim$\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor (closes the socket). 
+
+\mbox{\Hypertarget{classSocket_aae1f09b930bb7118172baa0abb15543e}\label{classSocket_aae1f09b930bb7118172baa0abb15543e}} 
+\index{Socket@{Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSocket}{Socket}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSocket_acdffcdd08c888132e95da022e0710b1d}\label{classSocket_acdffcdd08c888132e95da022e0710b1d}} 
+\index{Socket@{Socket}!bind@{bind}}
+\index{bind@{bind}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Socket\+::bind (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{int}]{port }\end{DoxyParamCaption})}
+
+Assigns the socket to an IP address. On Unix/\+Linux host can be a hostname, on Windows it can only be an IP address. \begin{DoxyReturn}{Returns}
+0 on success or a negative value on error, see \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976}{Socket\+::\+Errors}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSocket_aff8a77c02a44937db59c8c8a057072d9}\label{classSocket_aff8a77c02a44937db59c8c8a057072d9}} 
+\index{Socket@{Socket}!bind@{bind}}
+\index{bind@{bind}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Socket\+::bind (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+Assigns the socket to localhost. \begin{DoxyReturn}{Returns}
+0 on success or a negative value on error, see \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976}{Socket\+::\+Errors}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSocket_a744a91706b9510d266b7c07e31f3e028}\label{classSocket_a744a91706b9510d266b7c07e31f3e028}} 
+\index{Socket@{Socket}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Socket\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classSocket_aef06605c6725958004116983f1a2051f}\label{classSocket_aef06605c6725958004116983f1a2051f}} 
+\index{Socket@{Socket}!close@{close}}
+\index{close@{close}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily int Socket\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes the socket. 
+
+\mbox{\Hypertarget{classSocket_a772419bd74c4fe4987d190506a64ff87}\label{classSocket_a772419bd74c4fe4987d190506a64ff87}} 
+\index{Socket@{Socket}!connect@{connect}}
+\index{connect@{connect}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily int Socket\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{int}]{port }\end{DoxyParamCaption})}
+
+Connects the socket to an address. Typically used for connecting T\+C\+P/\+IP clients to a \mbox{\hyperlink{classServerSocket}{Server\+Socket}}. On Unix/\+Linux host can be a hostname, on Windows it can only be an IP address. \begin{DoxyReturn}{Returns}
+0 on success or a negative value on error which is one of \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976}{Socket\+::\+Errors}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSocket_a1f3bad4217fea24f81d39f57406a0ec8}\label{classSocket_a1f3bad4217fea24f81d39f57406a0ec8}} 
+\index{Socket@{Socket}!descriptor@{descriptor}}
+\index{descriptor@{descriptor}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{descriptor()}{descriptor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ccsocket_8h_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}} Socket\+::descriptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the descriptor of the socket. 
+
+\mbox{\Hypertarget{classSocket_a53a0a6980058ce02034033b05f6ca389}\label{classSocket_a53a0a6980058ce02034033b05f6ca389}} 
+\index{Socket@{Socket}!getReceiveBufferSize@{getReceiveBufferSize}}
+\index{getReceiveBufferSize@{getReceiveBufferSize}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{getReceiveBufferSize()}{getReceiveBufferSize()}}
+{\footnotesize\ttfamily int Socket\+::get\+Receive\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the size of the T\+C\+P/\+IP input buffer. 
+
+\mbox{\Hypertarget{classSocket_a440e7ee9303d454df0c51fe6125cd2af}\label{classSocket_a440e7ee9303d454df0c51fe6125cd2af}} 
+\index{Socket@{Socket}!getReuseAddress@{getReuseAddress}}
+\index{getReuseAddress@{getReuseAddress}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{getReuseAddress()}{getReuseAddress()}}
+{\footnotesize\ttfamily bool Socket\+::get\+Reuse\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return S\+O\+\_\+\+R\+E\+U\+S\+E\+A\+D\+DR state. 
+
+\mbox{\Hypertarget{classSocket_acb2d3979ff562c2ffd60b12a1b4c9897}\label{classSocket_acb2d3979ff562c2ffd60b12a1b4c9897}} 
+\index{Socket@{Socket}!getSendBufferSize@{getSendBufferSize}}
+\index{getSendBufferSize@{getSendBufferSize}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{getSendBufferSize()}{getSendBufferSize()}}
+{\footnotesize\ttfamily int Socket\+::get\+Send\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the size of the T\+C\+P/\+IP output buffer. 
+
+\mbox{\Hypertarget{classSocket_ae3545855771edf076843e2e07fa7d3cd}\label{classSocket_ae3545855771edf076843e2e07fa7d3cd}} 
+\index{Socket@{Socket}!getSoLinger@{getSoLinger}}
+\index{getSoLinger@{getSoLinger}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{getSoLinger()}{getSoLinger()}}
+{\footnotesize\ttfamily bool Socket\+::get\+So\+Linger (\begin{DoxyParamCaption}\item[{int \&}]{linger }\end{DoxyParamCaption}) const}
+
+
+
+Return S\+O\+\_\+\+L\+I\+N\+G\+ER state and the specified linger time in seconds. 
+
+\mbox{\Hypertarget{classSocket_a38b17de459b22ab45db16e538b963c49}\label{classSocket_a38b17de459b22ab45db16e538b963c49}} 
+\index{Socket@{Socket}!getSoTimeout@{getSoTimeout}}
+\index{getSoTimeout@{getSoTimeout}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{getSoTimeout()}{getSoTimeout()}}
+{\footnotesize\ttfamily int Socket\+::get\+So\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return S\+O\+\_\+\+T\+I\+M\+E\+O\+UT value. 
+
+\mbox{\Hypertarget{classSocket_a2539928ed0829df5070384f907ea48f7}\label{classSocket_a2539928ed0829df5070384f907ea48f7}} 
+\index{Socket@{Socket}!getTcpNoDelay@{getTcpNoDelay}}
+\index{getTcpNoDelay@{getTcpNoDelay}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{getTcpNoDelay()}{getTcpNoDelay()}}
+{\footnotesize\ttfamily bool Socket\+::get\+Tcp\+No\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return T\+C\+P\+\_\+\+N\+O\+D\+E\+L\+AY state. 
+
+\mbox{\Hypertarget{classSocket_af82b21921f44a5c210f8aaedc26ca1c3}\label{classSocket_af82b21921f44a5c210f8aaedc26ca1c3}} 
+\index{Socket@{Socket}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily bool Socket\+::is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the socket has been closed. 
+
+\mbox{\Hypertarget{classSocket_a32353d2225228b1ee4e3abef0f96cca7}\label{classSocket_a32353d2225228b1ee4e3abef0f96cca7}} 
+\index{Socket@{Socket}!operator=@{operator=}}
+\index{operator=@{operator=}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSocket}{Socket}}\& Socket\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSocket}{Socket}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classSocket_a7f221b24943b976d6cbae4cc0c32dd4f}\label{classSocket_a7f221b24943b976d6cbae4cc0c32dd4f}} 
+\index{Socket@{Socket}!operator=@{operator=}}
+\index{operator=@{operator=}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSocket}{Socket}}\& Socket\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSocket}{Socket}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classSocket_a01b463d51433a10658854446bde71c40}\label{classSocket_a01b463d51433a10658854446bde71c40}} 
+\index{Socket@{Socket}!receive@{receive}}
+\index{receive@{receive}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ccsocket_8h_a8bc56bf597ba32a5c8d828c75b4c9566}{S\+O\+C\+K\+S\+I\+ZE}} Socket\+::receive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ccsocket_8h_a3849e30868a59da338c76e51820877c1}{S\+O\+C\+K\+D\+A\+TA}} $\ast$}]{buf,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Receives data from a connected (T\+C\+P/\+IP) socket. Reads at most {\itshape len} bytes fand stores them in {\itshape buf}. By default, this function blocks the caller until thre is availbale data. \begin{DoxyReturn}{Returns}
+the number of bytes that were received, or 0 or \mbox{\hyperlink{classSocket_a650128aee2581e6695c6812d8afe14b5}{shutdown\+Output()}} was called on the other side, or \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976a86c20a6b52053a1f39f5d31b28b9e7cb}{Socket\+::\+Failed}} (-\/1) if an error occured. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSocket_aa19f1c03af97458c042880c6be638151}\label{classSocket_aa19f1c03af97458c042880c6be638151}} 
+\index{Socket@{Socket}!receiveFrom@{receiveFrom}}
+\index{receiveFrom@{receiveFrom}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{receiveFrom()}{receiveFrom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ccsocket_8h_a8bc56bf597ba32a5c8d828c75b4c9566}{S\+O\+C\+K\+S\+I\+ZE}} Socket\+::receive\+From (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{flags,  }\item[{\mbox{\hyperlink{ccsocket_8h_a964e73b2a42e87b1e20c8ffa730952a2}{S\+O\+C\+K\+A\+D\+DR}} $\ast$}]{from,  }\item[{socklen\+\_\+t $\ast$}]{addrlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Receives data from datagram socket. 
+
+\mbox{\Hypertarget{classSocket_aadd260f15afadf0c31fa3dcf88d0ea49}\label{classSocket_aadd260f15afadf0c31fa3dcf88d0ea49}} 
+\index{Socket@{Socket}!send@{send}}
+\index{send@{send}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ccsocket_8h_a8bc56bf597ba32a5c8d828c75b4c9566}{S\+O\+C\+K\+S\+I\+ZE}} Socket\+::send (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{ccsocket_8h_a3849e30868a59da338c76e51820877c1}{S\+O\+C\+K\+D\+A\+TA}} $\ast$}]{buf,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Send sdata to a connected (T\+C\+P/\+IP) socket. Sends the first {\itshape len} bytes in {\itshape buf}. \begin{DoxyReturn}{Returns}
+the number of bytes that were sent, or 0 or \mbox{\hyperlink{classSocket_a417b47af24de10184192de00d9112589}{shutdown\+Input()}} was called on the other side, or \mbox{\hyperlink{classSocket_a9f68308228badcdd299cd83e62e36976a86c20a6b52053a1f39f5d31b28b9e7cb}{Socket\+::\+Failed}} (-\/1) if an error occured. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+T\+C\+P/\+IP sockets do not preserve record boundaries, see \mbox{\hyperlink{classSocketBuffer}{Socket\+Buffer}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classSocket_aef5c4ba848f475f117b89bac531ac150}\label{classSocket_aef5c4ba848f475f117b89bac531ac150}} 
+\index{Socket@{Socket}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{sendTo()}{sendTo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ccsocket_8h_a8bc56bf597ba32a5c8d828c75b4c9566}{S\+O\+C\+K\+S\+I\+ZE}} Socket\+::send\+To (\begin{DoxyParamCaption}\item[{void const $\ast$}]{buf,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{flags,  }\item[{\mbox{\hyperlink{ccsocket_8h_a964e73b2a42e87b1e20c8ffa730952a2}{S\+O\+C\+K\+A\+D\+DR}} const $\ast$}]{to,  }\item[{socklen\+\_\+t}]{addrlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sends data to a datagram socket. 
+
+\mbox{\Hypertarget{classSocket_afa64e345564506760728d2b545fcbe0c}\label{classSocket_afa64e345564506760728d2b545fcbe0c}} 
+\index{Socket@{Socket}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily int Socket\+::set\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ccsocket_8h_a91d11a5e66bd1e10b0e62aadb7775c9d}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} \&}]{addr,  }\item[{const std\+::string \&}]{host,  }\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSocket_ae65efac394eb49594cbb5b2db957e056}\label{classSocket_ae65efac394eb49594cbb5b2db957e056}} 
+\index{Socket@{Socket}!setLocalAddress@{setLocalAddress}}
+\index{setLocalAddress@{setLocalAddress}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{setLocalAddress()}{setLocalAddress()}}
+{\footnotesize\ttfamily int Socket\+::set\+Local\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ccsocket_8h_a91d11a5e66bd1e10b0e62aadb7775c9d}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}} \&}]{addr,  }\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSocket_a06ff0dd6837c9f51948df655fc2713cd}\label{classSocket_a06ff0dd6837c9f51948df655fc2713cd}} 
+\index{Socket@{Socket}!setReceiveBufferSize@{setReceiveBufferSize}}
+\index{setReceiveBufferSize@{setReceiveBufferSize}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{setReceiveBufferSize()}{setReceiveBufferSize()}}
+{\footnotesize\ttfamily int Socket\+::set\+Receive\+Buffer\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Set the size of the T\+C\+P/\+IP input buffer. 
+
+\mbox{\Hypertarget{classSocket_ab02b997fa7e251d596116e95c9ccaf97}\label{classSocket_ab02b997fa7e251d596116e95c9ccaf97}} 
+\index{Socket@{Socket}!setReuseAddress@{setReuseAddress}}
+\index{setReuseAddress@{setReuseAddress}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{setReuseAddress()}{setReuseAddress()}}
+{\footnotesize\ttfamily int Socket\+::set\+Reuse\+Address (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Enable/disable the S\+O\+\_\+\+R\+E\+U\+S\+E\+A\+D\+DR socket option. 
+
+\mbox{\Hypertarget{classSocket_afc49ad6cc259a0006ca13bb22fdd7383}\label{classSocket_afc49ad6cc259a0006ca13bb22fdd7383}} 
+\index{Socket@{Socket}!setSendBufferSize@{setSendBufferSize}}
+\index{setSendBufferSize@{setSendBufferSize}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{setSendBufferSize()}{setSendBufferSize()}}
+{\footnotesize\ttfamily int Socket\+::set\+Send\+Buffer\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Set the size of the T\+C\+P/\+IP output buffer. 
+
+\mbox{\Hypertarget{classSocket_a41cc1caae51e3e83e16ce2c20689ed03}\label{classSocket_a41cc1caae51e3e83e16ce2c20689ed03}} 
+\index{Socket@{Socket}!setSoLinger@{setSoLinger}}
+\index{setSoLinger@{setSoLinger}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{setSoLinger()}{setSoLinger()}}
+{\footnotesize\ttfamily int Socket\+::set\+So\+Linger (\begin{DoxyParamCaption}\item[{bool}]{on,  }\item[{int}]{linger }\end{DoxyParamCaption})}
+
+
+
+Enable/disable S\+O\+\_\+\+L\+I\+N\+G\+ER with the specified linger time in seconds. 
+
+\mbox{\Hypertarget{classSocket_ad65a22ec40902e2c0a98c5d4ac885f99}\label{classSocket_ad65a22ec40902e2c0a98c5d4ac885f99}} 
+\index{Socket@{Socket}!setSoTimeout@{setSoTimeout}}
+\index{setSoTimeout@{setSoTimeout}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{setSoTimeout()}{setSoTimeout()}}
+{\footnotesize\ttfamily int Socket\+::set\+So\+Timeout (\begin{DoxyParamCaption}\item[{int}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Enable/disable S\+O\+\_\+\+T\+I\+M\+E\+O\+UT with the specified timeout (in milliseconds). 
+
+\mbox{\Hypertarget{classSocket_a7bc0110f3bedbb18f26b05ece01553fa}\label{classSocket_a7bc0110f3bedbb18f26b05ece01553fa}} 
+\index{Socket@{Socket}!setTcpNoDelay@{setTcpNoDelay}}
+\index{setTcpNoDelay@{setTcpNoDelay}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{setTcpNoDelay()}{setTcpNoDelay()}}
+{\footnotesize\ttfamily int Socket\+::set\+Tcp\+No\+Delay (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Enable/disable T\+C\+P\+\_\+\+N\+O\+D\+E\+L\+AY (turns on/off T\+CP coalescence). 
+
+\mbox{\Hypertarget{classSocket_a417b47af24de10184192de00d9112589}\label{classSocket_a417b47af24de10184192de00d9112589}} 
+\index{Socket@{Socket}!shutdownInput@{shutdownInput}}
+\index{shutdownInput@{shutdownInput}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{shutdownInput()}{shutdownInput()}}
+{\footnotesize\ttfamily void Socket\+::shutdown\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables further receive operations. 
+
+\mbox{\Hypertarget{classSocket_a650128aee2581e6695c6812d8afe14b5}\label{classSocket_a650128aee2581e6695c6812d8afe14b5}} 
+\index{Socket@{Socket}!shutdownOutput@{shutdownOutput}}
+\index{shutdownOutput@{shutdownOutput}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{shutdownOutput()}{shutdownOutput()}}
+{\footnotesize\ttfamily void Socket\+::shutdown\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables further send operations. 
+
+\mbox{\Hypertarget{classSocket_a1a662407744738aa56d1ccb6d7be26eb}\label{classSocket_a1a662407744738aa56d1ccb6d7be26eb}} 
+\index{Socket@{Socket}!startup@{startup}}
+\index{startup@{startup}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{startup()}{startup()}}
+{\footnotesize\ttfamily void Socket\+::startup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+initialisation and cleanup of sockets on Widows. \begin{DoxyNote}{Note}
+startup is automaticcaly called when a \mbox{\hyperlink{classSocket}{Socket}} or a \mbox{\hyperlink{classServerSocket}{Server\+Socket}} is created 
+\end{DoxyNote}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classSocket_a11a8bb11feaafab939278a8285afa567}\label{classSocket_a11a8bb11feaafab939278a8285afa567}} 
+\index{Socket@{Socket}!ServerSocket@{ServerSocket}}
+\index{ServerSocket@{ServerSocket}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{ServerSocket}{ServerSocket}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classServerSocket}{Server\+Socket}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSocket_afae007041d3bb70fa141b79791019d2d}\label{classSocket_afae007041d3bb70fa141b79791019d2d}} 
+\index{Socket@{Socket}!sockfd\_@{sockfd\_}}
+\index{sockfd\_@{sockfd\_}!Socket@{Socket}}
+\doxysubsubsection{\texorpdfstring{sockfd\_}{sockfd\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ccsocket_8h_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}} Socket\+::sockfd\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ccsocket_8h}{ccsocket.\+h}}\item 
+\mbox{\hyperlink{ccsocket_8cpp}{ccsocket.\+cpp}}\end{DoxyCompactItemize}

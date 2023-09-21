@@ -1,0 +1,108 @@
+\hypertarget{classMapping}{}\doxysection{Mapping Class Reference}
+\label{classMapping}\index{Mapping@{Mapping}}
+
+
+\mbox{\hyperlink{classMapping}{Mapping}} a database of \mbox{\hyperlink{classMultimedia}{Multimedia}} objects or \mbox{\hyperlink{classGroup}{Group(s)}} of \mbox{\hyperlink{classMultimedia}{Multimedia}} objects.  
+
+
+
+
+{\ttfamily \#include $<$Mapping.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMapping_a4d721f5e319fdcf56b4285d1368795d1}{Mapping}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPhoto}{Photo}} $>$ \mbox{\hyperlink{classMapping_a4dc6e6ca4d4fa536e9fbb5a21a4482b6}{create\+Photo}} (std\+::string \+\_\+object\+Name, std\+::string \+\_\+file\+Path, float \+\_\+longitude, float \+\_\+latitude)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVideo}{Video}} $>$ \mbox{\hyperlink{classMapping_abf3c70a049a7f2c66ee2b86e8c3be2e6}{create\+Video}} (std\+::string \+\_\+object\+Name, std\+::string \+\_\+file\+Path, int \+\_\+duration)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classFilm}{Film}} $>$ \mbox{\hyperlink{classMapping_a523af32baa58294e4a9d1b8256b27171}{create\+Film}} (std\+::string \+\_\+object\+Name, std\+::string \+\_\+file\+Path, int \+\_\+duration, int \+\_\+nbr\+Chapters, int $\ast$\+\_\+duration\+Chapters)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroup}{Group}} $>$ \mbox{\hyperlink{classMapping_ac333debf70c442ddbc9d32051474caaa}{create\+Group}} (std\+::string \+\_\+group\+Name)
+\item 
+void \mbox{\hyperlink{classMapping_a652892ecb18b9de6adf540828d333c22}{print}} (std\+::string const \&name, std\+::ostream \&where)
+\item 
+void \mbox{\hyperlink{classMapping_a8600403a9f6279ff36b53631a6647e75}{display}} (std\+::string const \&name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ $>$ \mbox{\hyperlink{classMapping_a2b9f03e1850b4f8ab73655b83144b554}{map\+Multimedia}}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroup}{Group}} $>$ $>$ \mbox{\hyperlink{classMapping_a4d649827a4cdb5ab41f2ec48327f811d}{map\+Group}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classMapping}{Mapping}} a database of \mbox{\hyperlink{classMultimedia}{Multimedia}} objects or \mbox{\hyperlink{classGroup}{Group(s)}} of \mbox{\hyperlink{classMultimedia}{Multimedia}} objects. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMapping_a4d721f5e319fdcf56b4285d1368795d1}\label{classMapping_a4d721f5e319fdcf56b4285d1368795d1}} 
+\index{Mapping@{Mapping}!Mapping@{Mapping}}
+\index{Mapping@{Mapping}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{Mapping()}{Mapping()}}
+{\footnotesize\ttfamily Mapping\+::\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMapping_a523af32baa58294e4a9d1b8256b27171}\label{classMapping_a523af32baa58294e4a9d1b8256b27171}} 
+\index{Mapping@{Mapping}!createFilm@{createFilm}}
+\index{createFilm@{createFilm}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{createFilm()}{createFilm()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classFilm}{Film}} $>$ Mapping\+::create\+Film (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+object\+Name,  }\item[{std\+::string}]{\+\_\+file\+Path,  }\item[{int}]{\+\_\+duration,  }\item[{int}]{\+\_\+nbr\+Chapters,  }\item[{int $\ast$}]{\+\_\+duration\+Chapters }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classMapping_ac333debf70c442ddbc9d32051474caaa}\label{classMapping_ac333debf70c442ddbc9d32051474caaa}} 
+\index{Mapping@{Mapping}!createGroup@{createGroup}}
+\index{createGroup@{createGroup}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{createGroup()}{createGroup()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroup}{Group}} $>$ Mapping\+::create\+Group (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+group\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classMapping_a4dc6e6ca4d4fa536e9fbb5a21a4482b6}\label{classMapping_a4dc6e6ca4d4fa536e9fbb5a21a4482b6}} 
+\index{Mapping@{Mapping}!createPhoto@{createPhoto}}
+\index{createPhoto@{createPhoto}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{createPhoto()}{createPhoto()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPhoto}{Photo}} $>$ Mapping\+::create\+Photo (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+object\+Name,  }\item[{std\+::string}]{\+\_\+file\+Path,  }\item[{float}]{\+\_\+longitude,  }\item[{float}]{\+\_\+latitude }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classMapping_abf3c70a049a7f2c66ee2b86e8c3be2e6}\label{classMapping_abf3c70a049a7f2c66ee2b86e8c3be2e6}} 
+\index{Mapping@{Mapping}!createVideo@{createVideo}}
+\index{createVideo@{createVideo}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{createVideo()}{createVideo()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVideo}{Video}} $>$ Mapping\+::create\+Video (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+object\+Name,  }\item[{std\+::string}]{\+\_\+file\+Path,  }\item[{int}]{\+\_\+duration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classMapping_a8600403a9f6279ff36b53631a6647e75}\label{classMapping_a8600403a9f6279ff36b53631a6647e75}} 
+\index{Mapping@{Mapping}!display@{display}}
+\index{display@{display}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Mapping\+::display (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classMapping_a652892ecb18b9de6adf540828d333c22}\label{classMapping_a652892ecb18b9de6adf540828d333c22}} 
+\index{Mapping@{Mapping}!print@{print}}
+\index{print@{print}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Mapping\+::print (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name,  }\item[{std\+::ostream \&}]{where }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMapping_a4d649827a4cdb5ab41f2ec48327f811d}\label{classMapping_a4d649827a4cdb5ab41f2ec48327f811d}} 
+\index{Mapping@{Mapping}!mapGroup@{mapGroup}}
+\index{mapGroup@{mapGroup}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{mapGroup}{mapGroup}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classGroup}{Group}}$>$ $>$ Mapping\+::map\+Group\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMapping_a2b9f03e1850b4f8ab73655b83144b554}\label{classMapping_a2b9f03e1850b4f8ab73655b83144b554}} 
+\index{Mapping@{Mapping}!mapMultimedia@{mapMultimedia}}
+\index{mapMultimedia@{mapMultimedia}!Mapping@{Mapping}}
+\doxysubsubsection{\texorpdfstring{mapMultimedia}{mapMultimedia}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr $<$\mbox{\hyperlink{classMultimedia}{Multimedia}}$>$ $>$ Mapping\+::map\+Multimedia\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Mapping_8h}{Mapping.\+h}}\end{DoxyCompactItemize}
